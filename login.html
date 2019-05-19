@@ -1,0 +1,89 @@
+<html>
+<head>
+<style>
+	body
+	{
+		font-size:120%;
+		background-image: url("login.jpg");
+		background-repeat:no-repeat;
+		background-size:cover;
+	}
+
+	.header
+	{
+		width:30%;
+		margin:50px auto 0px;
+		text-align:center;
+		padding:20px;
+	}
+
+	form
+	{
+		width:40%;
+		margin:20px auto;
+		padding:20px;
+		border:1px solid black;
+		border-radius:0px 0px 10px 10px;
+	}
+
+	.input-group
+	{
+		margin:10px 0px 10px 0px;
+	}
+
+	.input-group label
+	{
+		display:block;
+		text-align:left;
+		margin:17px;
+	}
+
+	.input-group input
+	{
+		height:30px;
+		width:93%;
+		padding:5px 10px;
+		font-size:16px;
+		border-radius:5px;
+		border:1px solid gray:
+	}
+
+	.btn
+	{
+		display:block;
+		padding:10px;
+		margin: 0 auto;
+		font-size:15px;
+		color:white;
+		background:#5F9EA0;
+		border:none;
+		border-radius:5px;
+	}
+</style>
+<title>
+	LOGIN FORM
+</title>
+</head>
+<body>
+	<h1 align="center" class="header">LOGIN FORM</h1>
+	<form method="post" action="login.php" autocomplete="off"  onsubmit="return checkform(this);">
+	<div class="input-group">
+		<label>USERNAME :</label>
+		<input type="Text" name="username" placeholder="Enter username.." required> 
+	</div>
+	<div class="input-group">
+		<label>PASSWORD :</label>
+		<input type="password" name="password" placeholder="Enter password.." required> 
+	</div>
+
+	<div class="input-group">
+		<button type="Submit" class="btn">LOGIN</button>
+	</div>
+	<a href="reg.html" >
+		<h4 align="center">
+			Create a new account
+		</h4>
+	</a>
+	</form>
+</body>
+</html>

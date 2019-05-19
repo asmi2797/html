@@ -1,0 +1,119 @@
+<html> 
+<head> 
+<script> 
+function Reg()								 
+{ 
+	var name = document.forms["RegForm"]["Name"];			 
+	var email = document.forms["RegForm"]["Email"]; 
+	var phone = document.forms["RegForm"]["Telephone"]; 
+	var user = document.forms["RegForm"]["user"]; 
+	var password = document.forms["RegForm"]["Password"]; 
+
+	if (name.value == "")								 
+	{ 
+		window.alert("Please enter your name."); 
+		name.focus(); 
+		return false; 
+	} 
+	
+	if (email.value == "")								 
+	{ 
+		window.alert("Please enter a valid e-mail address."); 
+		email.focus(); 
+		return false; 
+	} 
+
+	if (email.value.indexOf("@", 0) < 0)				 
+	{ 
+		window.alert("Please enter a valid e-mail address."); 
+		email.focus(); 
+		return false; 
+	} 
+
+	if (email.value.indexOf(".", 0) < 0)				 
+	{ 
+		window.alert("Please enter a valid e-mail address."); 
+		email.focus(); 
+		return false; 
+	} 
+
+	if (phone.value == "")						 
+	{ 
+		window.alert("Please enter your telephone number."); 
+		phone.focus(); 
+		return false; 
+	} 
+
+	if (password.value == "")					 
+	{ 
+		window.alert("Please create your password"); 
+		password.focus(); 
+		return false; 
+	} 
+
+	if (user.value == "")					 
+	{ 
+		window.alert("Please create your username"); 
+		password.focus(); 
+		return false; 
+	}  
+
+	return true; 
+}</script> 
+
+<style> 
+body {
+  	background-image: url("reg.jpg");
+	background-size:auto;
+	background-size:cover;
+}
+REG {										 
+	margin-left: 70px; 
+	font-weight: bold ; 
+	float: left; 
+	clear: left; 
+	width: 100px; 
+	text-align: left; 
+	margin-right: 10px; 
+	font-family:sans-serif,bold, Arial, Helvetica; 
+	font-size:14px; 
+} 
+
+
+form {										 
+	margin: 0 auto; 
+	width: 600px;
+color:white;
+	font-size:100%;
+}
+.btn
+{
+	display:block;
+	padding:20px;
+	margin: 0 auto;
+	font-size:15px;
+	color:white;
+	background:#4CAF50;
+	border:none;
+	border-radius:5px;
+}
+h1{
+color:white;
+}
+</style></head> 
+
+<body> 
+<h1 style="text-align: center"> REGISTRATION FORM </h1>		 
+<form name="RegForm" action="/register.php" autocomplete="off" onsubmit="return Reg()" method="post"> 
+	
+	<p>Name: <input type="text" size=65 name="Name" placeholder="Enter name"> </p><br>
+	<p>Telephone: <input type="text" size=65 name="Telephone"  pattern="[1-9]{1}[0-9]{9}" placeholder="Enter 10 digit number"> </p><br> 	 
+	<p>E-mail Address: <input type="text" size=65 name="Email" placeholder="Enter email"> </p><br>
+	<p>Create Username: <input type="text" size=65 name="user" placeholder="Enter Username"> </p><br>	  
+	<p>Create Password: <input type="text" size=65 name="Password" placeholder="Enter password"> </p><br> 
+	
+	<p><input type="submit" value="Register" class ="btn"name="Submit"></p>
+</form> 
+</body> 
+</html> 
+
